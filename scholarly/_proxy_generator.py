@@ -478,7 +478,7 @@ class ProxyGenerator(object):
         if self._proxy_works:
             init_kwargs["proxies"] = proxies #.get("http", None)
             self._proxies = proxies
-            if self.proxy_mode is ProxyMode.SCRAPERAPI:
+            if self.proxy_mode is ProxyMode.SCRAPERAPI or self.proxy_mode is ProxyMode.SINGLEPROXY:
                 # SSL Certificate verification must be disabled for
                 # ScraperAPI requests to work.
                 # https://www.scraperapi.com/documentation/
